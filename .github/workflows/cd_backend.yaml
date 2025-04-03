@@ -7,7 +7,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout theh code
+      - name: Checkout the code
         uses: actions/checkout@v3
 
       - name: Docker login
@@ -22,5 +22,5 @@ jobs:
           context: .
           file: ./docker/Dockerfile.backend
           push: true
-          tags: din-prajapati/todo-app-backend:${{ github.sha }} 
+          tags: din-prajapati/todo-app-backend:${{ github.sha }}
        
