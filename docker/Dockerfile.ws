@@ -14,6 +14,6 @@ COPY ./apps/ws ./apps/ws
 RUN bun install
 RUN bun run db:generate
 
-EXPOSE 8080
+EXPOSE 8081
 
 CMD ["bun", "run", "start:ws"]
