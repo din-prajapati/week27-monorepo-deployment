@@ -23,4 +23,6 @@ jobs:
           file: ./docker/Dockerfile.backend
           push: true
           tags: din-prajapati/todo-app-backend:${{ github.sha }}
+          build-args: |
+            DOCKER_USERNAME=${{ secrets.DOCKERHUB_USERNAME }}
        
