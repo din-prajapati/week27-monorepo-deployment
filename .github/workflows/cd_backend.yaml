@@ -24,7 +24,7 @@ jobs:
           push: true
           tags: 100xdocerarc/todo-app-backend:${{ github.sha }} 
        
-      - name: Build and Push Docker Image
+      - name: Build and Push Docker Image 
         run: |
           echo "${{ secrets.SSH_PRIVATE_KEY }}" &> ~/ssh_key
           mkdir -p /home/runner/.ssh
