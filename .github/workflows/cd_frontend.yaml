@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
 
       - name: Docker login
         uses: docker/login-action@v2
@@ -22,7 +22,7 @@ jobs:
           context: .
           file: ./docker/Dockerfile.frontend
           build-args: |
-            DATABASE_URL: ${{ secrets.DATABASE_URL }}
+            - DATABASE_URL: ${{ secrets.DATABASE_URL }}
           push: true
           tags: 100xdocerarc/todo-app-frontend:${{ github.sha }} 
        
